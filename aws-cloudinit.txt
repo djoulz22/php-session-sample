@@ -26,3 +26,4 @@ mv latest-64bit AmazonElastiCacheClusterClient.tgz
 pecl install AmazonElastiCacheClusterClient.tgz
 echo "extension=amazon-elasticache-cluster-client.so" | sudo tee /etc/php.d/memcached.ini
 
+cp /var/www/html/php.ini /etc/php.ini
