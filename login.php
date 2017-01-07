@@ -84,8 +84,8 @@
             if (isset($_POST['login']) && !empty($_POST['username']) 
                && !empty($_POST['password'])) {
 				
-               if ($_POST['username'] == 'tutorialspoint' && 
-                  $_POST['password'] == '1234') {
+               if ($_POST['username'] == 'juju' && 
+                  $_POST['password'] == 'juju') {
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
                   $_SESSION['username'] = 'tutorialspoint';
@@ -105,15 +105,15 @@
             ?>" method = "post">
             <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
             <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username = tutorialspoint" 
+               name = "username" placeholder = "username = juju" 
                required autofocus></br>
             <input type = "password" class = "form-control"
-               name = "password" placeholder = "password = 1234" required>
+               name = "password" placeholder = "password = juju" required>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
                name = "login">Login</button>
          </form>
 			
-	<?
+	<?php
             if (isset($_SESSION['valid']) && $_SESSION['valid'] === true) {
                echo "<h2>You are connected</h2>";
             }
