@@ -113,6 +113,12 @@
                name = "login">Login</button>
          </form>
 			
+	<?
+            if (isset($_SESSION['valid']) && $_SESSION['valid'] === true) {
+               echo "<h2>You are connected</h2>";
+            }
+         ?>
+
          Click here to clean <a href = "logout.php" tite = "Logout">Session.
          
       </div> 
