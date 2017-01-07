@@ -1,0 +1,21 @@
+#!/bin/bash
+
+yum update -y
+
+cd /tmp
+curl https://amazon-ssm-eu-west-1.s3.amazonaws.com/latest/linux_amd64/amazon-ssm-agent.rpm -o amazon-ssm-agent.rpm
+yum install -y amazon-ssm-agent.rpm
+rm amazon-ssm-agent.rpm
+
+yum install -y git httpd24 php56 mysql55-server php56-mysqlnd
+
+service httpd start
+
+echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+
+git clone https://github.com/djoulz22/php-session-sample.git
+
+cd php-session-sample
+
+cp -r * /var/www/html/
+cp -r .git /var/www/html/
