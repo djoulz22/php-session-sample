@@ -7,7 +7,7 @@ curl https://amazon-ssm-eu-west-1.s3.amazonaws.com/latest/linux_amd64/amazon-ssm
 yum install -y amazon-ssm-agent.rpm
 rm amazon-ssm-agent.rpm
 
-yum install -y git httpd24 php56 mysql55-server php56-mysqlnd gcc-c++ php php-pear
+yum install -y git httpd24 php56 mysql55-server php56-mysqlnd gcc-c++ php-pear
 
 service httpd start
 
