@@ -19,3 +19,10 @@ cd php-session-sample
 
 cp -r * /var/www/html/
 cp -r .git /var/www/html/
+
+cd $home
+wget https://elasticache-downloads.s3.amazonaws.com/ClusterClient/PHP-5.6/latest-64bit
+mv latest-64bit AmazonElastiCacheClusterClient.tgz
+pecl install AmazonElastiCacheClusterClient.tgz
+echo "extension=amazon-elasticache-cluster-client.so" | sudo tee /etc/php.d/memcached.ini
+
