@@ -91,7 +91,7 @@
                   $_POST['password'] == 'juju') {
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'tutorialspoint';
+                  $_SESSION['username'] = $_POST['username'];
                   
                   echo 'You have entered valid use name and password';
                }else {
