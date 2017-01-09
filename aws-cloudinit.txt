@@ -28,3 +28,4 @@ cd $home
 
 cp /var/www/html/php.ini /etc/php.ini
 cp /var/www/html/php.conf /etc/httpd/conf.d/php.conf
+cp /var/www/html/50-redis.ini /etc/php.d/50-redis.ini
