@@ -3,9 +3,12 @@
    session_start();
 ?>
 
-<?
+<?php
    // error_reporting(E_ALL);
    // ini_set("display_errors", 1);
+
+	var_dump(ini_get("session.save_handler"));
+	var_dump(ini_get("session.save_path"));
 ?>
 
 <html lang = "en">
@@ -125,5 +128,8 @@
 	<h3><?php echo "serveur : " . gethostname(); ?></h3>         
       </div> 
       
+	<?php
+		var_dump($_SESSION);
+	?>
    </body>
 </html>
