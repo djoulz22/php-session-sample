@@ -9,7 +9,7 @@ rm amazon-ssm-agent.rpm
 
 yum install -y git httpd24 php56 mysql55-server php56-mysqlnd php-redis gcc-c++ php-pear
 
-service httpd start
+# service httpd start
 
 echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 
@@ -29,3 +29,5 @@ cd $home
 cp /var/www/html/php.ini /etc/php.ini
 cp /var/www/html/php.conf /etc/httpd/conf.d/php.conf
 cp /var/www/html/50-redis.ini /etc/php.d/50-redis.ini
+
+service httpd start
